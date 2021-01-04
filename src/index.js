@@ -28,7 +28,7 @@ app.post('/notify', function (req, res) {
   const body = `<h2>${req.body.title}</h2><a href=\"${req.body.ruleUrl}\">${req.body.ruleName}</a><p>${req.body.message}</p>`;
 
   const content = {
-    body: "LitentryBot: \n```json\nAlter\n```",
+    body: "LitentryBot: \n```json\nAlert\n```",
     formatted_body: body,
     format: 'org.matrix.custom.html',
     msgtype: 'm.text',
@@ -45,7 +45,7 @@ app.post('/notify', function (req, res) {
   res.send('Ok');
 })
 
-const port = 3000;
+const port = 8040;
 const server = app.listen(port, function () {
   const host = server.address().address;
   const port = server.address().port;
